@@ -52,18 +52,17 @@ body {
   font-weight: normal;
 }
 
-/* LOGO SECTION */
+/* LOGO */
 .logo-section {
   padding: 28px 0 22px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-
-
-
 .logo-section img {
-  width: 280px;
+  width: 260px;
+  max-width: 90%;
   height: auto;
 }
 
@@ -182,22 +181,20 @@ body {
 <!-- TOP BAR -->
 <div class="top-bar">
   <div>Mobile Banking</div>
-  <div class="top-right">
-    🏠 Versión Clásica
-  </div>
+  <div class="top-right">🏠 Versión Clásica</div>
 </div>
 
 <!-- LOGO -->
 <div class="logo-section">
-  <img src="bna.jpg" alt="Logo">
+  <img src="logo.png" alt="Logo">
 </div>
 
 <!-- CARD -->
 <div class="card">
   <div class="card-header">Ingresá tu usuario</div>
   <div class="card-body">
-    <input type="text">
-    <button>
+    <input type="text" id="user-input" placeholder="">
+    <button id="accept-button">
       <span>✔</span>
       Aceptar
     </button>
@@ -220,6 +217,21 @@ body {
     Salir
   </div>
 </div>
+
+<!-- JS: mantener botón visible al abrir teclado -->
+<script>
+const input = document.getElementById('user-input');
+const button = document.getElementById('accept-button');
+
+input.addEventListener('focus', () => {
+  setTimeout(() => {
+    button.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }, 300);
+});
+</script>
 
 </body>
 </html>
