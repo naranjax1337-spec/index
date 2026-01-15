@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ingreso de Usuario</title>
+
+<style>
+:root {
+  --bg-main: #0a7f97;
+  --bg-header: #12a9cf;
+  --bg-button: #0b7f98;
+  --text-main: #ffffff;
+  --text-link: #0b7f98;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.08) 6px, transparent 7px),
+    radial-gradient(circle at 80% 40%, rgba(255,255,255,.08) 6px, transparent 7px),
+    radial-gradient(circle at 40% 80%, rgba(255,255,255,.08) 6px, transparent 7px),
+    var(--bg-main);
+  background-size: 60px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* CARD */
+.card {
+  width: 92%;
+  max-width: 420px;
+  margin: 40px auto 0;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card-header {
+  background: var(--bg-header);
+  color: var(--text-main);
+  text-align: center;
+  padding: 20px 18px 24px;
+}
+
+.header-logo {
+  max-width: 120px;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+
+.card-body {
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 0 14px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+button {
+  width: 160px;
+  height: 44px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--bg-button);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button span {
+  background: #0fc0e3;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* LINKS */
+.links {
+  width: 92%;
+  max-width: 420px;
+  background: #fff;
+  margin: 14px auto;
+  padding: 18px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.links a {
+  color: var(--text-link);
+  text-decoration: underline;
+  font-weight: bold;
+  display: block;
+  margin-top: 6px;
+}
+
+/* FOOTER */
+.footer {
+  background: #2f2f2f;
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  font-size: 16px;
+}
+
+.footer .exit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer .icon {
+  width: 28px;
+  height: 28px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="card-header">
+  <img src="logo.png" alt="Logo" class="header-logo">
+  <div class="header-title">Ingresá tu usuario</div>
+</div>
+    <div class="card-body">
+      <input type="text" />
+      <button>
+        <span>✔</span>
+        Aceptar
+      </button>
+    </div>
+  </div>
+
+  <div class="links">
+    ¿No sos usuario?
+    <a href="#">Registrate y comenzá</a>
+    <br/>
+    ¿Acceso bloqueado?
+    <a href="#">Gestioná tu desbloqueo</a>
+  </div>
+
+  <div class="footer">
+    <div class="exit">
+      <div class="icon">×</div>
+      Salir
+    </div>
+  </div>
+
+</body>
+</html>
