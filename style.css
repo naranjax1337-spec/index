@@ -1,0 +1,18 @@
+:root {
+  --bg-main: #0a7f97;
+  --bg-header: #12a9cf;
+  --bg-button: #0b7f98;
+  --text-link: #0b7f98;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.08) 6px, transparent 7px),
+    radial-gradient(circle at 80% 40%, rgba(255,255,255,.08) 6px,
