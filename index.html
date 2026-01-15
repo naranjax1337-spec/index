@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Ingreso de Usuario</title>
+<title>Mobile Banking</title>
 
 <style>
 :root {
   --bg-main: #0a7f97;
   --bg-header: #12a9cf;
   --bg-button: #0b7f98;
-  --text-main: #ffffff;
   --text-link: #0b7f98;
 }
 
+/* RESET */
 * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -21,7 +21,7 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   background:
     radial-gradient(circle at 20% 20%, rgba(255,255,255,.08) 6px, transparent 7px),
     radial-gradient(circle at 80% 40%, rgba(255,255,255,.08) 6px, transparent 7px),
@@ -30,14 +30,45 @@ body {
   background-size: 60px 60px;
   display: flex;
   flex-direction: column;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: var(--bg-header);
+  color: #fff;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+/* LOGO SECTION */
+.logo-section {
+  padding: 28px 0 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-section img {
+  width: 120px;
+  height: auto;
 }
 
 /* CARD */
 .card {
   width: 92%;
   max-width: 420px;
-  margin: 40px auto 0;
+  margin: 10px auto 0;
   background: #fff;
   border-radius: 6px;
   overflow: hidden;
@@ -45,29 +76,18 @@ body {
 
 .card-header {
   background: var(--bg-header);
-  color: var(--text-main);
+  color: #fff;
   text-align: center;
-  padding: 20px 18px 24px;
-}
-
-.header-logo {
-  max-width: 120px;
-  margin: 0 auto 12px;
-  display: block;
-}
-
-.header-title {
-  font-size: 22px;
+  padding: 16px;
+  font-size: 20px;
   font-weight: bold;
-  margin-top: 6px;
 }
-
 
 .card-body {
   padding: 20px;
 }
 
-input {
+.card-body input {
   width: 100%;
   height: 48px;
   border-radius: 6px;
@@ -77,7 +97,7 @@ input {
   margin-bottom: 16px;
 }
 
-button {
+.card-body button {
   width: 160px;
   height: 44px;
   margin: 0 auto;
@@ -93,12 +113,12 @@ button {
   cursor: pointer;
 }
 
-button span {
+.card-body button span {
   background: #0fc0e3;
   border-radius: 50%;
   width: 22px;
   height: 22px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
@@ -126,6 +146,7 @@ button span {
 
 /* FOOTER */
 .footer {
+  margin-top: auto;
   background: #2f2f2f;
   color: #fff;
   text-align: center;
@@ -155,34 +176,47 @@ button span {
 
 <body>
 
-  <div class="card">
-    <div class="card-header">
-  <img src="bna.jpg" alt="Logo" class="header-logo">
-  <div class="header-title">Ingresá tu usuario</div>
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div>Mobile Banking</div>
+  <div class="top-right">
+    🏠 Versión Clásica
+  </div>
 </div>
-    <div class="card-body">
-      <input type="text" />
-      <button>
-        <span>✔</span>
-        Aceptar
-      </button>
-    </div>
-  </div>
 
-  <div class="links">
-    ¿No sos usuario?
-    <a href="#">Registrate y comenzá</a>
-    <br/>
-    ¿Acceso bloqueado?
-    <a href="#">Gestioná tu desbloqueo</a>
-  </div>
+<!-- LOGO -->
+<div class="logo-section">
+  <img src="logo.png" alt="Logo">
+</div>
 
-  <div class="footer">
-    <div class="exit">
-      <div class="icon">×</div>
-      Salir
-    </div>
+<!-- CARD -->
+<div class="card">
+  <div class="card-header">Ingresá tu usuario</div>
+  <div class="card-body">
+    <input type="text">
+    <button>
+      <span>✔</span>
+      Aceptar
+    </button>
   </div>
+</div>
+
+<!-- LINKS -->
+<div class="links">
+  ¿No sos usuario?
+  <a href="#">Registrate y comenzá</a>
+  <br>
+  ¿Acceso bloqueado?
+  <a href="#">Gestioná tu desbloqueo</a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="exit">
+    <div class="icon">×</div>
+    Salir
+  </div>
+</div>
 
 </body>
 </html>
